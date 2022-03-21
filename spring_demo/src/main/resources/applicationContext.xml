@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userDao" class="com.xiaoguangbiao.dao.impl.UserDaoImpl">
+        <property name="username" value="zhangsan"></property>
+        <property name="password" value="123456"></property>
+    </bean>
+
+    <bean id="userService" class="com.xiaoguangbiao.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+
+</beans>
